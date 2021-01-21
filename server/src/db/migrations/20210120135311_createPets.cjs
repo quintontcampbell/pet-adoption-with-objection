@@ -12,7 +12,7 @@ exports.up = async (knex) => {
     table.boolean("available").notNullable()
     table.integer("weight")
     table.integer("estimatedAge")
-    table.bigInteger("speciesId").unsigned().index().references("species.id");
+    table.bigInteger("speciesId").notNullable().unsigned().index().references("species.id");
     table.timestamp("createdAt").notNullable().defaultTo(knex.fn.now())
     table.timestamp("updatedAt").notNullable().defaultTo(knex.fn.now())
 

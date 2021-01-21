@@ -22,7 +22,7 @@ class Pet extends Model {
           type: "integer"
         },
         speciesId: {
-          type: ["type", "string"]
+          type: ["integer", "string"]
         }
       }
     }
